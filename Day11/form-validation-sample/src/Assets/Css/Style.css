@@ -1,16 +1,17 @@
 body {
     margin: 0px;
-    background-image: url('../Images/x.png');
   }
   
   .card-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 92vh;
+    height: 100vh;
     width: 100vw;
-
-    /* background-color: rgba(172, 161, 174, 0.298); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(172, 161, 174, 0.298);
   }
   
   
@@ -55,7 +56,6 @@ body {
   
   .navtitle {
     width: 50vw;
-    font-weight: bold;
   }
   
   .navlinks li {
@@ -73,7 +73,7 @@ body {
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #4A00E0, #8E2DE2);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height: 92vh;
+    height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -146,12 +146,7 @@ body {
   .w-50 {
     width: 40% !important;
   }
-  .w-100{
-    width:100%
-  }
-  .w-80{
-    width: 80%;
-  }
+  
   .btn-container {
     width: 100%;
     display: flex;
@@ -187,4 +182,15 @@ body {
     width: 100vw;
     height: 500rem;
     background-color: #33e22d;
+  }
+  .error-comp{
+    border-radius: 5px;
+    width: 80%;
+    padding: 0.4rem;
+    border: none;
+    background-color: rgba(255, 0, 0, 0.228);
+    color: red;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    border: 2px solid rgb(255, 0, 0);
   }

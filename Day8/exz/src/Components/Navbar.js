@@ -2,29 +2,28 @@ import { useRef, useState } from 'react'
 import '../Assets/Css/Style.css'
 const NavBar = () => {
     const [visible, setVisible] = useState(false);
-    const username = useRef(null)
-    const password = useRef(null)
-
     // const [data, setData] = useState({
-    //     username: '',
+    //     email: '',
     //     password: ''
     // })
     // const handleCahnge = (e) => {
     //     setData({ ...data, [e.target.id]: e.target.value })
     // }
+    const email = useRef(null)
+    const password = useRef(null)
+
     const Login = (e) => {
         e.preventDefault();
-        const data ={
-            username : username.current.value, 
-            password : password.current.value
+        const data = {
+            email: email.current.value,
+            password: password.current.value
         }
-        console.log(data)
+        console.log(data.email.length)
 
-        username.current.value =''
-        password.current.value =''
+        email.current.value = ''
+        password.current.value = ''
+        // email.current.focus()
 
-        username.current.focus()
-        // alert(data.username + data.password)
     }
 
     const toggle = () => {
@@ -56,8 +55,8 @@ const NavBar = () => {
                     <div className="">
                         <h2 className="auth-title">Login</h2>
                         <form className="auth-container h-30v shadow" onSubmit={Login}>
-                            <input type="text" name="" id="username" placeholder="Username" className="auth-input"  ref={username}/>
-                            <input type="password" name="" id="password" placeholder="Password" className="auth-input"  ref={password}/>
+                            <input type="text" name="" id="email" placeholder="email" className="auth-input" ref={email} />
+                            <input type="password" name="" id="password" placeholder="Password" className="auth-input" ref={password} />
                             <span className='btn-container'>
                                 <input type="submit" value="Login" className="auth-btn w-50" />
                                 <button className='cancel-btn w-50' onClick={toggle}>Cancel</button>

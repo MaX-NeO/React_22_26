@@ -8,8 +8,8 @@ const App = () => {
   return (
     <>
       <div className="App">
-        <WrappedComponentWithLoading />
-        {/* <NavBar/> */}
+        {/* <WrappedComponentWithLoading /> */}
+        <NavBar/>
       </div>
     </>
   )
